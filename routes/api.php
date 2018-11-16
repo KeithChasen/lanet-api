@@ -1,8 +1,7 @@
 <?php
 
 Route::group([
-    'middleware' => ['cors'],
-
+    'middleware' => ['cors']
 ], function ($router) {
 
     $router->post('register', ['as' => 'auth.register', 'uses' => 'AuthController@register']);
