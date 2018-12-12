@@ -14,7 +14,9 @@ Route::group([
     });
 
     $router->group(['middleware' => 'jwt.auth'], function ($router) {
-
+        $router->get('customers', 'CustomersController@index');
+        $router->get('customers/{id}', 'CustomersController@show');
+        $router->post('customers', 'CustomersController@store');
     });
 
 });
